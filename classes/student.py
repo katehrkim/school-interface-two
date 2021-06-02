@@ -18,4 +18,10 @@ class Student(Person):
             for row in reader:
                 students.append(Student(**dict(row)))
         return students
+    
+    def __str__(self):
+        upper = self.name.upper()
+        return f'{upper}\n_______________\nage: {self.age}\nid: {self.school_id}'
+
+
 
